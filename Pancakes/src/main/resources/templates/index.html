@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Cakes</title>
+    <link rel="icon" href="../static/images/logo.svg" type="image/svg">
+    <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../static/scripts/loadTimeScript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <header th:insert="/headerTemplate :: headerTemplate">
+    </header>
+
+    <main>
+        <nav>
+            <a href="index.html">Торты</a>
+            <a href = "bakery.html">Выпечка</a>
+            <a href = "pancakes.html">Пирожные</a>
+            <a href = "birthday.html">На день рождения</a>
+            <a href = "assortment.html">Ассортимент</a>
+        </nav>
+        <script src="../static/scripts/navigationBehavior.js"></script>
+        <div class="content">
+            <h3>Торты</h3>
+            <p th:text="${name}"></p>
+            <div class = "items">
+                <div class = "item">
+                    <span>Торт "Oreo"</span>
+                    <p></p>
+                    <div class="wrapper">
+                        <img id="red-velvet" src="/images/red-velvet.svg" alt="red-violet">
+                    </div>
+
+
+                    <span>Цена за 1 кг: 1000 руб.</span>
+                </div>
+
+                <div class = "item">
+                    <span>Торт "Молочный ломтик"</span>
+                    <p></p>
+                    <div class="wrapper">
+                        <img id="milk-slice" src="/images/milk-slice.svg" alt="milk-slice">
+                    </div>
+                    <p></p>
+
+                    <span>price: 3000</span>
+                </div>
+
+                <div class = "item">
+                    <span>Торт клубничный</span>
+                    <p></p>
+                    <div class = "wrapper">
+                        <img id="strawberry" src="/images/strawberry.svg" alt="strawberry">
+                    </div>
+                    <p></p>
+
+                    <span>price: 3000</span>
+                </div>
+
+                <div class = "item">
+                    <span>Торт еще один торт</span>
+                    <p></p>
+                    <div class = "wrapper">
+                        <img id="strawberry1" src="/images/strawberry.svg" alt="strawberry">
+                    </div>
+
+
+                    <span>price: 3000</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer th:insert="/footerTemplate :: footerTemplate">
+
+    </footer>
+</body>
+</html>

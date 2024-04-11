@@ -1,24 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Cakes</title>
-    <link rel="icon" href="images/logo.svg" type="image/svg">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="../static/images/logo.svg" type="image/svg">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="scripts/loadTimeScript.js"></script>
+    <script src="../static/scripts/loadTimeScript.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 </head>
 <body>
-    <header>
-        <img class="cakeLogo" src="images/logo.svg">
-        <img class="name" src="images/name.svg">
-        <img class="flower" src="images/flow.svg">
 
+    <header>
+        <img class="cakeLogo" src="../static/images/logo.svg">
+        <img class="name" src="../static/images/name.svg">
+        <img class="flower" src="../static/images/flow.svg">
     </header>
 
     <main>
@@ -29,58 +30,35 @@
             <a href = "birthday.html">На день рождения</a>
             <a href = "assortment.html">Ассортимент</a>
         </nav>
-        <script src="scripts/navigationBehavior.js"></script>
-        <div class="content">
-            <h3>Торты</h3>
-            <div class = "items">
-                <div class = "item">
-                    <span>Торт "Oreo"</span>
-                    <p></p>
-                    <div class="wrapper">
-                        <img id="red-velvet" src="images/red-velvet.svg" alt="red-violet">
-                    </div>
+        <script src="../static/scripts/navigationBehavior.js"></script>
 
-
-                    <span>Цена за 1 кг: 1000 руб.</span>
-                </div>
-
-                <div class = "item">
-                    <span>Торт "Молочный ломтик"</span>
-                    <p></p>
-                    <div class="wrapper">
-                        <img id="milk-slice" src="images/milk-slice.svg" alt="milk-slice">
-                    </div>
-                    <p></p>
-
-                    <span>price: 3000</span>
-                </div>
-
-                <div class = "item">
-                    <span>Торт клубничный</span>
-                    <p></p>
-                    <div class = "wrapper">
-                        <img id="strawberry" src="images/strawberry.svg" alt="strawberry">
-                    </div>
-                    <p></p>
-
-                    <span>price: 3000</span>
-                </div>
-
-                <div class = "item">
-                    <span>Торт еще один торт</span>
-                    <p></p>
-                    <div class = "wrapper">
-                        <img id="strawberry1" src="images/strawberry.svg" alt="strawberry">
-                    </div>
-
-
-                    <span>price: 3000</span>
-                </div>
-            </div>
-        </div>
+    <div class = "form">
+        <form id="Assortment">
+            <label for="type">Название</label>
+            <select id="type" name="type">
+                <option value=""></option>
+                <option value="Торт">Торт</option>
+                <option value="Выпечка">Выпечка</option>
+                <option value="День рождения">День рождения</option>
+                <option value="Пирожные">Пирожные</option>
+                <!-- добавить другие жанры -->
+            </select>
+            <label for="taste">Вкус</label>
+            <input type="text" id="taste" name="taste"><br>
+            <label for="weight">Вес</label>
+            <input type="text" id="weight" name="weight"><br>
+            <label for="priceFrom">Цена от:</label>
+            <input type="number" id="priceFrom" name="priceFrom"><br>
+            <label for="priceTo">Цена до:</label>
+            <input type="number" id="priceTo" name="priceTo"><br>
+            <input type="submit" value="Сгенерировать таблицу">
+        </form>
+        <div id="resultTable"></div>
+        <script src="../static/scripts/tableGenerator.js"></script>
+        <script src="../static/scripts/download.js"></script>
+    </div>
 
     </main>
-
     <footer>
         <h4>Contacts: </h4>
         <h5>Instagram: </h5>
@@ -122,11 +100,13 @@
 
             </tr>
         </table>
+
         <div class="reviews">
             <span class="loader"></span>
             <button class="footerReviews" onclick="buttonClicked(this)">Отзывы покупателей</button>
-            <script src="scripts/download.js"></script>
+            <script src="../static/scripts/download.js"></script>
         </div>
     </footer>
+
 </body>
 </html>
