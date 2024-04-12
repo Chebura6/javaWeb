@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Cakes</title>
-    <link rel="icon" href="../static/images/logo.svg" type="image/svg">
-    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <link rel="icon" href="/images/logo.svg" type="image/svg">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="../static/scripts/loadTimeScript.js"></script>
+    <script src="/scripts/loadTimeScript.js"></script>
 </head>
 <body>
 <header>
-    <img class="cakeLogo" src="../static/images/logo.svg">
-    <img class="name" src="../static/images/name.svg">
-    <img class="flower" src="../static/images/flow.svg">
+    <img class="cakeLogo" src="/images/logo.svg">
+    <img class="name" src="/images/name.svg">
+    <img class="flower" src="/images/flow.svg">
 </header>
 
 <main>
     <nav>
-        <a href="index.html">Торты</a>
-        <a href = "bakery.html">Выпечка</a>
-        <a href = "pancakes.html">Пирожные</a>
-        <a href = "birthday.html">На день рождения</a>
-        <a href = "assortment.html">Ассортимент</a>
+        <a href="index">Торты</a>
+        <a href = "bakery">Выпечка</a>
+        <a href = "pancakes">Пирожные</a>
+        <a href = "birthday">На день рождения</a>
+        <a href = "assortment">Ассортимент</a>
     </nav>
-    <script src="../static/scripts/navigationBehavior.js"></script>
+    <script src="/scripts/navigationBehavior.js"></script>
     <div class="content">
         <h3>Пирожные</h3>
         <div class = "items">
@@ -35,7 +35,7 @@
                 <span>Пирожное 1</span>
                 <p></p>
                 <div class="wrapper">
-                    <img id="red-velvet" src="../static/images/red-velvet.svg" alt="red-violet">
+                    <img id="red-velvet" src="/images/red-velvet.svg" alt="red-violet">
                 </div>
 
 
@@ -46,7 +46,7 @@
                 <span>Пирожное 2</span>
                 <p></p>
                 <div class="wrapper">
-                    <img id="milk-slice" src="../static/images/milk-slice.svg" alt="milk-slice">
+                    <img id="milk-slice" src="/images/milk-slice.svg" alt="milk-slice">
                 </div>
                 <p></p>
 
@@ -57,7 +57,7 @@
                 <span>Пирожное 3</span>
                 <p></p>
                 <div class = "wrapper">
-                    <img id="strawberry" src="../static/images/strawberry.svg" alt="strawberry">
+                    <img id="strawberry" src="/images/strawberry.svg" alt="strawberry">
                 </div>
                 <p></p>
 
@@ -68,7 +68,7 @@
                 <span>Пирожное еще одно пирожное</span>
                 <p></p>
                 <div class = "wrapper">
-                    <img id="strawberry1" src="../static/images/strawberry.svg" alt="strawberry">
+                    <img id="strawberry1" src="/images/strawberry.svg" alt="strawberry">
                 </div>
 
 
@@ -79,53 +79,8 @@
 
 </main>
 
-<footer>
-    <h4>Contacts: </h4>
-    <h5>Instagram: </h5>
-    <h5>Telegram: </h5>
-    <table>
-        <caption>
-            Стоимость доставки по СПБ и ЛО
-        </caption>
+<footer th:insert="/footerTemplate :: footerTemplate">
 
-        <tr>
-            <th>Вес, кг</th>
-            <th>1-2</th>
-            <th>2-3</th>
-            <th>3-4</th>
-        </tr>
-        <tr>
-            <td>Санкт-Петербург</td>
-            <td>200</td>
-            <td>300</td>
-            <td>400</td>
-        </tr>
-        <tr>
-            <td>Всеволожск</td>
-            <td>350</td>
-            <td>450</td>
-            <td>550</td>
-        </tr>
-        <tr>
-            <td>Пушкин</td>
-            <td>400</td>
-            <td>500</td>
-            <td>600</td>
-        </tr>
-        <tr>
-            <td>Остальные</td>
-            <td>500</td>
-            <td>750</td>
-            <td>850</td>
-
-        </tr>
-    </table>
-
-    <div class="reviews">
-        <span class="loader"></span>
-        <button class="footerReviews" onclick="buttonClicked(this)">Отзывы покупателей</button>
-        <script src="../static/scripts/download.js"></script>
-    </div>
 </footer>
 </body>
 </html>
