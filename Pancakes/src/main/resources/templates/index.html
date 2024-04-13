@@ -14,9 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <header th:insert="/headerTemplate :: headerTemplate">
+    <header th:insert="headerTemplate :: headerTemplate">
     </header>
-
     <main>
         <nav>
 <!--            <a href="index">Торты</a>-->
@@ -25,7 +24,7 @@
             <a href = "birthday">На день рождения</a>
             <a href = "assortment">Ассортимент</a>
         </nav>
-        <script src="../static/scripts/navigationBehavior.js"></script>
+        <script src="/scripts/navigationBehavior.js"></script>
         <div class="content">
             <h3>Торты</h3>
 <!--            <p th:text="${name}"></p>-->
@@ -78,7 +77,7 @@
 
     </main>
 
-    <footer th:insert="/footerTemplate :: footerTemplate">
+    <footer th:insert="footerTemplate :: footerTemplate">
 
     </footer>
 </body>
