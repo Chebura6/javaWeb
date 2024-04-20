@@ -4,7 +4,7 @@ package org.pancakes.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "cookieseller", schema = "pancakes")
+@Table(name = "cookie_seller", schema = "pancakes")
 public class CookieSeller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
