@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Cakes</title>
+    <meta charset="utf-8">
+    <meta name="server-time" th:content="${serverProcessingTime}" />
     <link rel="icon" href="/images/logo.svg" type="image/svg">
     <link rel="stylesheet" type="text/css" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="/scripts/loadTimeScript.js"></script>
+<!--    <script src="/scripts/loadTimeScript.js"></script>-->
 </head>
 <body>
-<header th:insert="headerTemplate :: headerTemplate">
+<header th:insert="src/headerTemplate :: headerTemplate">
 </header>
 
 <main>
@@ -26,7 +28,14 @@
     </nav>
     <script src="/scripts/navigationBehavior.js"></script>
     <div class="content">
-        <h3>Пирожные</h3>
+        <div class="contentHeader">
+            <div></div>
+            <div class="contentName">
+                <h3>Пирожные</h3>
+            </div>
+            <div class="logField" th:insert="src/unloggedTemplate">
+            </div>
+        </div>
         <div class = "items">
             <div class = "item">
                 <span>Пирожное 1</span>
@@ -76,7 +85,7 @@
 
 </main>
 
-<footer th:insert="/footerTemplate :: footerTemplate">
+<footer th:insert="src/footerTemplate :: footerTemplate">
 
 </footer>
 </body>

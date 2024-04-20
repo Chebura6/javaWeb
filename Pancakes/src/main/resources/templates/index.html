@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Cakes</title>
-    <link rel="icon" href="../static/images/logo.svg" type="image/svg">
+    <meta charset="utf-8">
+    <meta name="server-time" th:content="${serverProcessingTime}" />
+    <script type="text/javascript" th:src="@{scripts/navigationBehavior.js}"></script>
+    <link rel="icon" href="/images/logo.svg" type="image/svg">
     <link rel="stylesheet" type="text/css" th:href="@{/styles.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="../static/scripts/loadTimeScript.js"></script>
+<!--    <script src="../static/scripts/loadTimeScript.js"></script>-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <header th:insert="headerTemplate :: headerTemplate">
+    <header th:insert="src/headerTemplate :: headerTemplate">
     </header>
     <main>
         <nav>
@@ -25,8 +28,17 @@
             <a href = "assortment">Ассортимент</a>
         </nav>
         <script src="/scripts/navigationBehavior.js"></script>
+
         <div class="content">
-            <h3>Торты</h3>
+            <div class="contentHeader">
+                <div></div>
+                <div class="contentName">
+                    <h3>Торты</h3>
+                </div>
+                <div class="logField" th:insert="src/unloggedTemplate">
+                </div>
+            </div>
+
 <!--            <p th:text="${name}"></p>-->
             <div class = "items">
                 <div class = "item">
@@ -77,7 +89,7 @@
 
     </main>
 
-    <footer th:insert="footerTemplate :: footerTemplate">
+    <footer th:insert="src/footerTemplate :: footerTemplate">
 
     </footer>
 </body>

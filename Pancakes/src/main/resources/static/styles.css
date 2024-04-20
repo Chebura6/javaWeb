@@ -81,6 +81,8 @@ a:hover {
         list-style: none;
     }
 
+
+
     h3 {
         /*width: 100%;*/
         text-align: center;
@@ -95,6 +97,7 @@ a:hover {
         display: flex;
         flex-direction: row;
     }
+
     .cakeLogo {
         width: 33%;
     }
@@ -161,6 +164,27 @@ a:hover {
         font-family: Roboto;
         font-size: 1.5vw;
     }
+
+    .contentHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logField {
+        align-self: flex-end;
+    }
+
+    .logText {
+        font-size: 1em;
+    }
+
+    .contentName {
+        align-self: flex-start;
+        font-style: normal;
+    }
+
+
 }
 
 @media screen and (min-width: 50px) and (max-width: 699px) {
@@ -178,6 +202,12 @@ a:hover {
         position: fixed;
         visibility: hidden;
         width: 33%;
+    }
+
+    .contentHeader {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
     }
 
     .name {
