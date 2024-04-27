@@ -13,7 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@100&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--    <script src="../static/scripts/loadTimeScript.js"></script>-->
+    <script type="text/javascript" th:src="@{https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js}"></script>
+    <script src="/scripts/contentLoaders/pancakeContentLoader.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
@@ -23,9 +25,11 @@
         <nav>
 <!--            <a href="index">Торты</a>-->
             <a href = "bakery">Выпечка</a>
-            <a href = "pancakes">Пирожные</a>
-            <a href = "birthday">На день рождения</a>
+            <a href = "cookie">Печенье</a>
             <a href = "assortment">Ассортимент</a>
+            <a href = "createBakery" sec:authorize="hasAnyRole('ROLE_BAKERYSELLER', 'ROLE_ADMIN')">Добавить выпечку</a>
+            <a href = "createPancake" sec:authorize="hasAnyRole('ROLE_PANCAKESELLER', 'ROLE_ADMIN')">Добавить торт</a>
+            <a href = "createCookie" sec:authorize="hasAnyRole('ROLE_COOKIESELLER', 'ROLE_ADMIN')">Добавить печенье</a>
         </nav>
         <script src="/scripts/navigationBehavior.js"></script>
 
@@ -41,49 +45,6 @@
 
 <!--            <p th:text="${name}"></p>-->
             <div class = "items">
-                <div class = "item">
-                    <span>Торт "Oreo"</span>
-                    <p></p>
-                    <div class="wrapper">
-                        <img id="red-velvet" src="/images/red-velvet.svg" alt="red-violet">
-                    </div>
-
-
-                    <span>Цена за 1 кг: 1000 руб.</span>
-                </div>
-
-                <div class = "item">
-                    <span>Торт "Молочный ломтик"</span>
-                    <p></p>
-                    <div class="wrapper">
-                        <img id="milk-slice" src="/images/milk-slice.svg" alt="milk-slice">
-                    </div>
-                    <p></p>
-
-                    <span>price: 3000</span>
-                </div>
-
-                <div class = "item">
-                    <span>Торт клубничный</span>
-                    <p></p>
-                    <div class = "wrapper">
-                        <img id="strawberry" src="/images/strawberry.svg" alt="strawberry">
-                    </div>
-                    <p></p>
-
-                    <span>price: 3000</span>
-                </div>
-
-                <div class = "item">
-                    <span>Торт еще один торт</span>
-                    <p></p>
-                    <div class = "wrapper">
-                        <img id="strawberry1" src="/images/strawberry.svg" alt="strawberry">
-                    </div>
-
-
-                    <span>price: 3000</span>
-                </div>
             </div>
         </div>
 

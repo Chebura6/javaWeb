@@ -1,6 +1,5 @@
 package org.pancakes.entities;
 
-
 import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,8 +8,9 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "cookie_seller", schema = "pancakes")
-public class CookieSeller {
+@Table(name = "pancake_seller", schema = "pancakes")
+public class PancakeSeller {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sellerID", nullable = false)

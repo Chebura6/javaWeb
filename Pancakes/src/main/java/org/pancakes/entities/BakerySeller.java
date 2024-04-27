@@ -1,16 +1,15 @@
 package org.pancakes.entities;
 
-
 import javax.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
+import org.springframework.stereotype.Service;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "cookie_seller", schema = "pancakes")
-public class CookieSeller {
+@Table(name = "bakery_seller", schema = "pancakes")
+public class BakerySeller {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "sellerID", nullable = false)
